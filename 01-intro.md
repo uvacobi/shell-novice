@@ -100,6 +100,12 @@ a prompt might look like, e.g.:
 nelle@localhost $
 ```
 
+or 
+
+```bash
+nelle@udc-ba38-32c0 $
+```
+
 The prompt might even include more than this. Do not worry if your prompt is not
 just a short `$ `. This lesson does not depend on this additional information and it
 should also not get in your way. The only important item to focus on is the `$ `
@@ -113,8 +119,9 @@ $ ls
 ```
 
 ```output
-Desktop     Downloads   Movies      Pictures
-Documents   Library     Music       Public
+bin      lib64     output  private         R
+include  myweb     perl5   privatemodules  share
+lib      ondemand  pkg     public_html     shell-lesson-data
 ```
 
 :::::::::::::::::::::::::::::::::::::::::  callout
