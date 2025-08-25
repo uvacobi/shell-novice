@@ -145,8 +145,9 @@ $ ls
 ```
 
 ```output
-Applications Documents    Library      Music        Public
-Desktop      Downloads    Movies       Pictures
+bin      lib64     output  private         R
+include  myweb     perl5   privatemodules  share
+lib      ondemand  pkg     public_html     shell-lesson-data
 ```
 
 (Again, your results may be slightly different depending on your operating
@@ -170,8 +171,9 @@ $ ls -F
 ```
 
 ```output
-Applications/ Documents/    Library/      Music/        Public/
-Desktop/      Downloads/    Movies/       Pictures/
+bin/      lib64/     output/  private/         R/
+include/  myweb/     perl5/   privatemodules/  share/
+lib/      ondemand/  pkg/     public_html@     shell-lesson-data/
 ```
 
 Here,
@@ -387,50 +389,24 @@ see if a new output file was written.
 
 Not only can we use `ls` on the current working directory,
 but we can use it to list the contents of a different directory.
-Let's take a look at our `Desktop` directory by running `ls -F Desktop`,
-i.e.,
-the command `ls` with the `-F` **option** and the [**argument**][Arguments]  `Desktop`.
-The argument `Desktop` tells `ls` that
-we want a listing of something other than our current working directory:
-
-```bash
-$ ls -F Desktop
-```
-
-```output
-shell-lesson-data/
-```
-
-Note that if a directory named `Desktop` does not exist in your current working directory,
-this command will return an error. Typically, a `Desktop` directory exists in your
-home directory, which we assume is the current working directory of your bash shell.
-
-Your output should be a list of all the files and sub-directories in your
-Desktop directory, including the `shell-lesson-data` directory you downloaded at
-the [setup for this lesson](../learners/setup.md). (On most systems, the
-contents of the `Desktop` directory in the shell will show up as icons in a graphical
-user interface behind all the open windows. See if this is the case for you.)
 
 Organizing things hierarchically helps us keep track of our work. While it's
 possible to put hundreds of files in our home directory just as it's possible to
 pile hundreds of printed papers on our desk, it's much easier to find things when
 they've been organized into sensibly-named subdirectories.
 
-Now that we know the `shell-lesson-data` directory is located in our Desktop directory, we
-can do two things.
 
-First, using the same strategy as before, we can look at its contents by passing
-a directory name to `ls`:
+Let’s take a look at our `shell-lesson-data` directory by running `ls -F shell-lesson-data`, i.e., the command `ls` with the `-F` option and the argument `shell-lesson-data`. The argument `shell-lesson-data` tells `ls` that we want a listing of something other than our current working directory
 
 ```bash
-$ ls -F Desktop/shell-lesson-data
+$ ls -F shell-lesson-data
 ```
 
 ```output
 exercise-data/  north-pacific-gyre/
 ```
 
-Second, we can actually change our location to a different directory, so
+Now we can actually change our location to a different directory, so
 we are no longer located in
 our home directory.
 
@@ -448,20 +424,18 @@ Let's say we want to move into the `exercise-data` directory we saw above. We ca
 use the following series of commands to get there:
 
 ```bash
-$ cd Desktop
 $ cd shell-lesson-data
 $ cd exercise-data
 ```
 
-These commands will move us from our home directory into our Desktop directory, then into
-the `shell-lesson-data` directory, then into the `exercise-data` directory.
+These commands will move us from our home directory into the `shell-lesson-data` directory, then into the `exercise-data` directory.
 You will notice that `cd` doesn't print anything. This is normal.
 Many shell commands will not output anything to the screen when successfully executed.
 But if we run `pwd` after it, we can see that we are now
-in `/Users/nelle/Desktop/shell-lesson-data/exercise-data`.
+in `/Users/nelle/shell-lesson-data/exercise-data`.
 
 If we run `ls -F` without arguments now,
-it lists the contents of `/Users/nelle/Desktop/shell-lesson-data/exercise-data`,
+it lists the contents of `/Users/nelle/shell-lesson-data/exercise-data`,
 because that's where we now are:
 
 ```bash
@@ -469,7 +443,7 @@ $ pwd
 ```
 
 ```output
-/Users/nelle/Desktop/shell-lesson-data/exercise-data
+/Users/nelle/shell-lesson-data/exercise-data
 ```
 
 ```bash
@@ -510,14 +484,14 @@ $ cd ..
 or more succinctly,
 the **parent** of the current directory.
 Sure enough,
-if we run `pwd` after running `cd ..`, we're back in `/Users/nelle/Desktop/shell-lesson-data`:
+if we run `pwd` after running `cd ..`, we're back in `/Users/nelle/shell-lesson-data`:
 
 ```bash
 $ pwd
 ```
 
 ```output
-/Users/nelle/Desktop/shell-lesson-data
+/Users/nelle/shell-lesson-data
 ```
 
 The special directory `..` doesn't usually show up when we run `ls`. If we want
@@ -586,7 +560,7 @@ three commands, but we can actually string together the list of directories
 to move to `exercise-data` in one step:
 
 ```bash
-$ cd Desktop/shell-lesson-data/exercise-data
+$ cd shell-lesson-data/exercise-data
 ```
 
 Check that we've moved to the right place by running `pwd` and `ls -F`.
@@ -616,11 +590,11 @@ $ pwd
 ```
 
 ```output
-/Users/nelle/Desktop/shell-lesson-data/exercise-data
+/Users/nelle/shell-lesson-data/exercise-data
 ```
 
 ```bash
-$ cd /Users/nelle/Desktop/shell-lesson-data
+$ cd /Users/nelle/shell-lesson-data
 ```
 
 Run `pwd` and `ls -F` to ensure that we're in the directory we expect.
@@ -647,10 +621,10 @@ that the former brings you *up*, while the latter brings you *back*.
 ***
 
 Try it!
-First navigate to `~/Desktop/shell-lesson-data` (you should already be there).
+First navigate to `~/shell-lesson-data` (you should already be there).
 
 ```bash
-$ cd ~/Desktop/shell-lesson-data
+$ cd ~/shell-lesson-data
 ```
 
 Then `cd` into the `exercise-data/creatures` directory
@@ -665,8 +639,8 @@ Now if you run
 $ cd -
 ```
 
-you'll see you're back in `~/Desktop/shell-lesson-data`.
-Run `cd -` again and you're back in `~/Desktop/shell-lesson-data/exercise-data/creatures`
+you'll see you're back in `~/shell-lesson-data`.
+Run `cd -` again and you're back in `~/shell-lesson-data/exercise-data/creatures`
 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -810,7 +784,7 @@ For example, `ls -s` will display the size of files and directories alongside th
 while `ls -S` will sort the files and directories by size, as shown below:
 
 ```bash
-$ cd ~/Desktop/shell-lesson-data
+$ cd ~/shell-lesson-data
 $ ls -s exercise-data
 ```
 
@@ -840,9 +814,10 @@ $ ls -F /
 ```
 
 ```output
-Applications/         System/
-Library/              Users/
-Network/              Volumes/
+apps@  etc/   lib64@         lost+found/  opt/      run/      share/     tmp/
+bin@   gpfs/  local/         media/       proc/     sbin@     srv/       usr/
+boot/  home@  localscratch/  mnt/         project@  scratch@  standard@  var/
+dev/   lib@   logs@          nv/          root/     sfs/      sys/
 ```
 
 ### Nelle's Pipeline: Organizing Files
@@ -911,7 +886,7 @@ and we will see it in many other tools as we go on.
 
 
 
-[Arguments]: https://swcarpentry.github.io/shell-novice/reference.html#argument
+[Arguments]: https://uvacobi.github.io/shell-novice/reference.html#argument
 
 
 :::::::::::::::::::::::::::::::::::::::: keypoints

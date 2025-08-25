@@ -568,7 +568,7 @@ Moving to the `north-pacific-gyre` directory, Nelle types:
 
 ```bash
 $ cd
-$ cd Desktop/shell-lesson-data/north-pacific-gyre
+$ cd shell-lesson-data/north-pacific-gyre
 $ for datafile in NENE*A.txt NENE*B.txt
 > do
 >     echo $datafile

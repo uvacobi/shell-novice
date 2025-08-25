@@ -42,7 +42,7 @@ we're going to be working in the writing subdirectory:
 
 ```bash
 $ cd
-$ cd Desktop/shell-lesson-data/exercise-data/writing
+$ cd shell-lesson-data/exercise-data/writing
 $ cat haiku.txt
 ```
 
