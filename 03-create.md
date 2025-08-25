@@ -30,7 +30,7 @@ using the `exercise-data/writing` directory as an example.
 
 ### Step one: see where we are and what we already have
 
-We should still be in the `shell-lesson-data` directory on the Desktop,
+We should still be in the `shell-lesson-data` directory in the home directory,
 which we can check using:
 
 ```bash
@@ -38,7 +38,7 @@ $ pwd
 ```
 
 ```output
-/Users/nelle/Desktop/shell-lesson-data
+/Users/nelle/shell-lesson-data
 ```
 
 Next we'll move to the `exercise-data/writing` directory and see what it contains:
@@ -339,7 +339,7 @@ attempt to open the `whale.mp3` file.
 Returning to the `shell-lesson-data/exercise-data/writing` directory,
 
 ```bash
-$ cd ~/Desktop/shell-lesson-data/exercise-data/writing
+$ cd ~/shell-lesson-data/exercise-data/writing
 ```
 
 In our `thesis` directory we have a file `draft.txt`
