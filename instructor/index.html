@@ -416,124 +416,74 @@ Finish
 </tr></tbody></table><p>
       The actual schedule may vary slightly depending on the topics and exercises chosen by the instructor.
       </p>
-      </section><section id="setup"><section><h2 class="section-heading" id="download-files">Download files<a class="anchor" aria-label="anchor" href="#download-files"></a></h2>
-<hr class="half-width"><p>You need to download some files to follow this lesson.</p>
-<ol style="list-style-type: decimal"><li>Download <a href="../data/shell-lesson-data.zip">shell-lesson-data.zip</a> and move the
-file to your Desktop.</li>
-<li>Unzip/extract the file. <strong>Let your instructor know if you need
-help with this step</strong>. You should end up with a new folder called
-<strong><code>shell-lesson-data</code></strong> on your Desktop.</li>
-</ol></section><section><h2 class="section-heading" id="install-software">Install software<a class="anchor" aria-label="anchor" href="#install-software"></a></h2>
-<hr class="half-width"><p>If you do not already have the shell software installed, you will
-need to <a href="https://carpentries.github.io/workshop-template/install_instructions/#shell" class="external-link">download
-and install</a> it.</p>
-</section><section><h2 class="section-heading" id="open-a-new-shell">Open a new shell<a class="anchor" aria-label="anchor" href="#open-a-new-shell"></a></h2>
-<hr class="half-width"><p>After installing the software</p>
-<ol start="3" style="list-style-type: decimal"><li>Open a terminal. If you’re not sure how to open a terminal on your
-operating system, see the instructions below.</li>
-<li>In the terminal type <code>cd</code> then press the
-<kbd>Return</kbd> key. This step will make sure you start with your home
-folder as your working directory.</li>
-</ol><p>In the lesson, you will find out how to access the data files in this
-folder.</p>
-<div id="where-to-type-commands-how-to-open-a-new-shell" class="callout">
-<div class="callout-square">
-<i class="callout-icon" data-feather="bell"></i>
+      </section><section id="setup"><div class="section level1">
+<h1 id="setup">Setup<a class="anchor" aria-label="anchor" href="#setup"></a></h1>
+<div class="section level2">
+<h2 id="logging-into-rivannaafton">Logging into Rivanna/Afton<a class="anchor" aria-label="anchor" href="#logging-into-rivannaafton"></a></h2>
+<p>To log into the Rivanna or Afton HPC cluster, start by visiting the
+<strong>HPC Login Instructions</strong> page:<br><a href="https://www.rc.virginia.edu/userinfo/hpc/login/" class="external-link">https://www.rc.virginia.edu/userinfo/hpc/login/</a></p>
+<p>Follow the instructions for <strong>Secure Shell Access
+(SSH)</strong> based on your operating system:</p>
+<ul><li>
+<strong>Windows</strong>: Install the recommended SSH client,
+<strong>MobaXterm</strong>, by clicking the <em>Install MobaXterm</em>
+button under the Windows section of the page and following the
+instructions.<br></li>
+<li>
+<strong>macOS</strong>: Open the <strong>Terminal</strong>
+application, located in the <em>Utilities</em> folder.
+<ul><li>On macOS Mojave and earlier, the default shell is
+<strong>Bash</strong>.<br></li>
+<li>On macOS Catalina and later, the default shell is
+<strong>Zsh</strong>. To temporarily switch to Bash, open Terminal, type
+<code>bash</code>, and press <kbd>Return</kbd>.<br></li>
+</ul></li>
+<li>
+<strong>Linux</strong>: Most Linux systems use <strong>Bash</strong>
+as the default shell. Open a terminal using the Applications menu or
+search bar (look for <strong>Terminal</strong>,
+<strong>Konsole</strong>, or <strong>xterm</strong>). If your system
+defaults to another shell, you can switch by typing <code>bash</code>
+and pressing <kbd>Return</kbd>.</li>
+</ul><p>Once you have a terminal open, connect to the HPC cluster by
+typing:</p>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="fu">ssh</span> <span class="at">-Y</span> uva_compute_id@login.hpc.virginia.edu</span></code></pre>
 </div>
-<span class="callout-header">Callout</span>
-<div id="where-to-type-commands-how-to-open-a-new-shell" class="callout-inner">
-<h3 class="callout-title">Where to type commands: How to open a new
-shell</h3>
-<div class="callout-content">
-<p>The shell is a program that enables us to send commands to the
-computer and receive output. It is also referred to as the terminal or
-command line.</p>
-<p>Some computers include a default Unix Shell program. The steps below
-describe some methods for identifying and opening a Unix Shell program
-if you already have one installed. There are also options for
-identifying and downloading a Unix Shell program, a Linux/UNIX emulator,
-or a program to access a Unix Shell on a server.</p>
-<p>If none of the options below address your circumstances, try an
-online search for: Unix shell [your computer model] [your operating
-system].</p>
+<p>Replace <code>uva_compute_id</code> with your UVA computing ID. You
+will then be prompted to enter your UVA NetBadge password.</p>
 </div>
+<div class="section level2">
+<h2 id="data-access-for-this-lesson">Data Access for This Lesson<a class="anchor" aria-label="anchor" href="#data-access-for-this-lesson"></a></h2>
+<p>Before we start, let’s make sure you are in your home directory. In
+the terminal, type:</p>
+<div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="bu">cd</span></span></code></pre>
 </div>
+<p>and press <kbd>Return</kbd>.</p>
+<p>The data for this lesson is stored in the folder:</p>
+<div class="codewrapper sourceCode" id="cb3">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="ex">/standard/bims6000/shell-lesson-data</span></span></code></pre>
 </div>
-<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
-  <h4 class="accordion-header" id="headingSolution1">
-  Windows
-  </h4>
-</button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
-<div class="accordion-body">
-<p>Computers with Windows operating systems do not automatically have a
-Unix Shell program installed. In this lesson, we encourage you to use an
-emulator included in <a href="https://carpentries.github.io/workshop-template/install_instructions/#shell" class="external-link">Git
-for Windows</a>, which gives you access to both Bash shell commands and
-Git.</p>
-<p>Once installed, you can open a terminal by running the program Git
-Bash from the Windows start menu.</p>
-<p><strong>For advanced users:</strong></p>
-<p>As an alternative to Git for Windows you may wish to <a href="https://learn.microsoft.com/en-us/windows/wsl/install" class="external-link">Install the
-Windows Subsystem for Linux</a> which gives access to a Bash shell
-command-line tool in Windows 10 and above.</p>
-<p>Please note that commands in the Windows Subsystem for Linux (WSL)
-may differ slightly from those shown in the lesson or presented in the
-workshop.</p>
+<p>Let’s copy this folder into your home directory so you can work with
+your own copy. Run the following command:</p>
+<div class="codewrapper sourceCode" id="cb4">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="fu">cp</span> <span class="at">-r</span> /standard/bims6000/shell-lesson-data .</span></code></pre>
+</div>
+<p>Don’t worry about the details of this command yet. We will explain
+how it works later in the lesson.</p>
 </div>
 </div>
-</div>
-</div>
-<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
-  <h4 class="accordion-header" id="headingSolution2">
-  MacOS
-  </h4>
-</button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
-<div class="accordion-body">
-<p>For a Mac computer running macOS Mojave or earlier releases, the
-default Unix Shell is Bash. For a Mac computer running macOS Catalina or
-later releases, the default Unix Shell is Zsh. Your default shell is
-available via the Terminal program within your Utilities folder.</p>
-<p>To open Terminal, try one or both of the following:</p>
-<ul><li>In Finder, select the Go menu, then select Utilities. Locate
-Terminal in the Utilities folder and open it.</li>
-<li>Use the Mac ‘Spotlight’ computer search function. Search for:
-<code>Terminal</code> and press <kbd>Return</kbd>.</li>
-</ul><p>To check if your machine is set up to use something other than Bash,
-type <code>echo $SHELL</code> in your terminal window.</p>
-<p>If your machine is set up to use something other than Bash, you can
-run it by opening a terminal and typing <code>bash</code>.</p>
-<p><a href="https://www.macworld.co.uk/feature/mac-software/how-use-terminal-on-mac-3608274/" class="external-link">How
-to Use Terminal on a Mac</a></p>
-</div>
-</div>
-</div>
-</div>
-<div id="accordionSolution3" class="accordion challenge-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
-  <h4 class="accordion-header" id="headingSolution3">
-  Linux
-  </h4>
-</button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
-<div class="accordion-body">
-<p>The default Unix Shell for Linux operating systems is usually Bash.
-On most versions of Linux, it is accessible by running the <a href="https://help.gnome.org/users/gnome-terminal/stable/" class="external-link">Gnome
-Terminal</a> or <a href="https://konsole.kde.org/" class="external-link">KDE Konsole</a> or <a href="https://en.wikipedia.org/wiki/Xterm" class="external-link">xterm</a>, which can be found
-via the applications menu or the search bar. If your machine is set up
-to use something other than Bash, you can run it by opening a terminal
-and typing <code>bash</code>.</p>
-</div>
-</div>
-</div>
-</div>
-</section></section></main><nav class="bottom-pagination mx-md-4" aria-label="Next Chapter"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
+
+      </section></main><nav class="bottom-pagination mx-md-4" aria-label="Next Chapter"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link float-end" href="../instructor/01-intro.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <!-- content for large screens -->
@@ -582,8 +532,8 @@ and typing <code>bash</code>.</p>
   "url": "https://swcarpentry.github.io/shell-novice/instructor/index.html",
   "identifier": "https://swcarpentry.github.io/shell-novice/instructor/index.html",
   "dateCreated": "2014-10-22",
-  "dateModified": "2025-08-24",
-  "datePublished": "2025-08-24"
+  "dateModified": "2025-08-25",
+  "datePublished": "2025-08-25"
 }
 
   </script><script>
