@@ -9,7 +9,13 @@ title: Setup
 To log into the Rivanna or Afton HPC cluster, start by visiting the **HPC Login Instructions** page:  
 [https://www.rc.virginia.edu/userinfo/hpc/login/](https://www.rc.virginia.edu/userinfo/hpc/login/)
 
-Follow the instructions for **Secure Shell Access (SSH)** based on your operating system:  
+You can either follow the instructions for **Web-based Access**, or the **Secure Shell Access (SSH)**
+
+### Web-based Access
+For web-based access, scroll down to the **Web-based Access**, and click on ``Launch Open OnDemand''. Log on using your UVA credentials (uva_compute_id and Netbadge password). You now have point and click access to your account on UVA’s HPC!. 8.	Click on ">_ Open in Terminal" on the upper left of the screen. 9.	This will open a UNIX terminal on your web browser.
+
+### Secure Shell Access (SSH)
+UVA HPC is accessible through ssh (Secure Shell) connections. Follow the instructions for Secure Shell Access (SSH) based on your operating system:
 
 - **Windows**: Install the recommended SSH client, **MobaXterm**, by clicking the *Install MobaXterm* button under the Windows section of the page and following the instructions.  
 - **macOS**: Open the **Terminal** application, located in the *Utilities* folder.  
