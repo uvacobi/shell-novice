@@ -112,7 +112,7 @@ should also not get in your way. The only important item to focus on is the `$ `
 character itself and we will see later why.
 
 So let's try our first command, `ls`, which is short for listing.
-This command will list the contents of the current directory:
+This command will list the contents of the current directory, but the output might be different for you based on the contents of your home directory:
 
 ```bash
 $ ls
